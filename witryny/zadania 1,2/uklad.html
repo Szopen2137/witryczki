@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Układ słoneczny</title>
+    <style>
+        body {
+            background-color: #2d5016;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #tabela {
+            margin: 20px auto;
+        }
+        #dane {
+            margin: 0 auto;
+        }
+        #dane img {
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            border: 3px solid #8bc34a;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        #dane img:hover {
+            border-color: #ffeb3b;
+        }
+        #wynik {
+            color: #ffeb3b;
+            font-size: 32px;
+            margin-top: 30px;
+        }
+        #tresc {
+            color: #c8e6c9;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="tabela">
+        <table id="dane">
+            <tr>
+                <td><img src="zdjecia/ziemia.jpg" id="ziemia" onclick="ziemia()"></td>
+                <td><img src="zdjecia/mars.jpg" id="mars" onclick="mars()"></td>
+                <td><img src="zdjecia/wenus.jpg" id="wenus" onclick="wenus()"></td>
+                <td><img src="zdjecia/pluton.jpg" id="pluton" onclick="pluton()"></td>
+                <td><img src="zdjecia/saturn.jpg" id="saturn" onclick="saturn()"></td>
+            </tr>
+        </table>
+    </div>
+    
+    <h2 id="wynik">Wybierz planetę</h2>
+    <p id="tresc"></p>
+
+    <script>
+        function ziemia() {
+            document.getElementById("wynik").innerHTML = "ZIEMIA";
+            document.getElementById("tresc").innerHTML = "Ziemio, zielona planeto,<br>Tyś jest matką naszą, niech w sercach naszych<br>Na zawsze gości twój obraz piękny.";
+        }
+        
+        function mars() {
+            document.getElementById("wynik").innerHTML = "MARS";
+            document.getElementById("tresc").innerHTML = "Mars, czerwona planeta,<br>Wśród gwiazd się nie przegrzeje.<br>Choć nie ma tam życia, to<br>Wciąż fascynuje nas, o tak!";
+        }
+        
+        function wenus() {
+            document.getElementById("wynik").innerHTML = "WENUS";
+            document.getElementById("tresc").innerHTML = "Skąd ty jesteś, wenus?<br>Ja? Znad Nilu.<br>Wypuść mnie na kilka chwil,<br>To zawiozę cię nad Nil.";
+        }
+        
+        function pluton() {
+            document.getElementById("wynik").innerHTML = "PLUTON";
+            document.getElementById("tresc").innerHTML = "Pluton, mała planeta,<br>Na końcu Układu Słonecznego.<br>Choć nieco zapomniany,<br>Wciąż w sercach naszych trwa.";
+        }
+        
+        function saturn() {
+            document.getElementById("wynik").innerHTML = "SATURN";
+            document.getElementById("tresc").innerHTML = "Saturn, z pierścieniami,<br>Wśród gwiazd się dumnie mieni.<br>Choć daleko od nas,<br>Wciąż budzi w nas zachwyt i blask.";
+        }
+    </script>
+</body>
+</html>
